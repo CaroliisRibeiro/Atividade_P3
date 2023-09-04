@@ -18,10 +18,11 @@ public class index {
             }else{
                 System.out.println( " O numero: " + num + " negativo");
             }
-    
+
         }
-    
+        
     }
+
 
 // 2. Crie um programa que receba a idade de uma pessoa e exiba
 // se ela é maior de idade ou menor de idade.
