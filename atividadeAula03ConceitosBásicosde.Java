@@ -12,9 +12,10 @@ public class index{
         System.out.println( "Seja bem Vindes! " + nome);
 
     }
+
 }
 
-// 2-Peça ao usuário que digite sua idade em texto 
+// 2--Peça ao usuário que digite sua idade em texto 
 //(por exemplo, "18") e converta-a em um número inteiro.
 import java.util.Scanner;
 public class index{
