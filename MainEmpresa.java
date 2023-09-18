@@ -1,17 +1,20 @@
 import java.util.ArrayList;
+import java.util.List;
+
 
 public class MainEmpresa{
 
 
     public static void main( String [] args){
+        ArrayList<Trabalhador> trabalhadores = new ArrayList<>();
 
-         ArrayList<Trabalhador> trabalhadores = new ArrayList<>();
-         Trabalhador trabalhador1 = new Trabalhador("João",29,60,44,true);
-         Trabalhador trabalhador2 = new Trabalhador("Maria", 25, 25,44,false);
+        Trabalhador funcionario1 = new Trabalhador("João", 30, 60,44,true);
+        Trabalhador funcionario2 = new Trabalhador("Maria", 25, 70,36, true);
+        
+        trabalhadores.add(funcionario1);
+        trabalhadores.add(funcionario2);
 
-
-        trabalhadores.add(trabalhador1);
-        trabalhadores.add(trabalhador2);
+        
 
         Empresa minhaEmpresa = new Empresa("Minha Empresa", "123456789", "Rua da Empresa", "CEO");
 
@@ -28,7 +31,7 @@ public class MainEmpresa{
         minhaEmpresa.calcularPagamento();
 
         // Colocando um funcionário de férias
-        trabalhador1.ferias();
+        funcionario1.ferias();
 
         // Fazendo funcionários trabalharem novamente
         minhaEmpresa.trabalhar();
