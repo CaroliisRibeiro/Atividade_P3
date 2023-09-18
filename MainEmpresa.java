@@ -5,31 +5,37 @@ public class MainEmpresa{
 
     public static void main( String [] args){
 
-         ArrayList<Trabalhador> trabalhador = new ArrayList<>();
-
-        Trabalhador [] trabalhador1 = { new Trabalhador( " Carol", 23, 80, 44, false)};
-        Empresa trbahador1 = new Empresa("comadre", "123", trabalhador1, "rua 2", 1, "Carol");
-        
-        Trabalhador [] trabalhador2= { new Trabalhador( " Fabio", 33, 60, 44, true)};
-        Empresa trbahador2 = new Empresa("comadre", "123", trabalhador1, "rua 2", 1, "Carol");
-
-        Trabalhador [] trabalhador3= { new Trabalhador( " Suri", 18, 90, 36, false)};
-        Empresa trbahador3 = new Empresa("comadre", "123", trabalhador1, "rua 2", 1, "Carol");
-        
-
-        trabalhador.get(0).contratar();
-        
+         ArrayList<Trabalhador> trabalhadores = new ArrayList<>();
+         Trabalhador trabalhador1 = new Trabalhador("João",29,60,44,true);
+         Trabalhador trabalhador2 = new Trabalhador("Maria", 25, 25,44,false);
 
 
-        trabalhador.get(0).ferias();
-        trabalhador.get(1).ferias();
-        trabalhador.get(2).ferias();
+        trabalhadores.add(trabalhador1);
+        trabalhadores.add(trabalhador2);
+
+        Empresa minhaEmpresa = new Empresa("Minha Empresa", "123456789", "Rua da Empresa", "CEO");
 
 
-        trabalhador1.calcularPagamento();
+          // Contratando funcionários da lista
+          for (Trabalhador trabalhador : trabalhadores) {
+            minhaEmpresa.contratar(trabalhador);
+        }
 
+        // Fazendo funcionários trabalharem
+        minhaEmpresa.trabalhar();
 
+        // Calculando pagamento
+        minhaEmpresa.calcularPagamento();
 
+        // Colocando um funcionário de férias
+        trabalhador1.ferias();
+
+        // Fazendo funcionários trabalharem novamente
+        minhaEmpresa.trabalhar();
+
+        // Calculando pagamento novamente
+        minhaEmpresa.calcularPagamento();
     }
-
 }
+       
+        

@@ -7,8 +7,6 @@ private int horasTrabalhadas;
 private boolean ferias;
 
 
-
-
 public Trabalhador(String nome, int idade, double valorDaHora, int horasTrabalhadas, boolean ferias ){
 
     this.nome= nome;
@@ -17,7 +15,6 @@ public Trabalhador(String nome, int idade, double valorDaHora, int horasTrabalha
     this.horasTrabalhadas = horasTrabalhadas;
     this.ferias = ferias;
     
-
 }
 
 public String getNome() {
@@ -30,20 +27,13 @@ public int getIdade() {
 }
 
 
-
-
 public double getValorDaHora() {
     return valorDaHora;
 }
 
-
-
-
 public int getHorasTrabalhadas() {
     return horasTrabalhadas;
 }
-
-
 
 
 public boolean isFerias() {
@@ -51,15 +41,19 @@ public boolean isFerias() {
 }
 
 
-
-public void ferias(){
-
+public void trabalharPorHora(int horas) {
+    horasTrabalhadas += horas;
 }
 
-
-
-
-
+public void ferias() {
+    if (ferias) {
+        System.out.println(nome + " voltou ao trabalho.");
+        ferias = false;
+    } else {
+        System.out.println(nome + " está de férias.");
+        ferias = true;
+    }
+  }
 
 }
 
