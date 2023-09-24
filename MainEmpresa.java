@@ -1,65 +1,35 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainEmpresa {
 
 
     public static void main( String [] args){
-                
-        // Criar uma lista de funcionários
 
-        List<Trabalhador> funcionarios = new ArrayList<>(); 
+         ArrayList<Trabalhador> trabalhador = new ArrayList<>();
+
+        Trabalhador [] trabalhador1 = { new Trabalhador( " Carol", 23, 80, 44, false)};
+        Empresa trbahador1 = new Empresa("comadre", "123", trabalhador1, "rua 2", 1, "Carol");
         
-        // Criar uma instância da Empres
+        Trabalhador [] trabalhador2= { new Trabalhador( " Fabio", 33, 60, 44, true)};
+        Empresa trbahador2 = new Empresa("comadre", "123", trabalhador1, "rua 2", 1, "Carol");
 
-        Empresa Comadre = new Empresa(); // intanciada a empresa sem funcionário
+        Trabalhador [] trabalhador3= { new Trabalhador( " Suri", 18, 90, 36, false)};
+        Empresa trbahador3 = new Empresa("comadre", "123", trabalhador1, "rua 2", 1, "Carol");
+        
 
-
-        // Adicionar funcionários à lista
-
-        funcionarios.add(new Trabalhador("Alice", 44,10,44, true));
-        funcionarios.add(new Trabalhador("Carol", 43, 10,36,true));
-        funcionarios.add(new Trabalhador("Suri", 20, 10, 24, false));
-
-        // Contratar os funcionários na empresa
+        trabalhador.get(0).contratar();
+        
 
 
-        for (Trabalhador trabalhador : funcionarios) {
-            Comadre.contratar(trabalhador);
+        trabalhador.get(0).ferias();
+        trabalhador.get(1).ferias();
+        trabalhador.get(2).ferias();
 
 
-        }
-
-        Comadre.trabalhar();
-
-            
-                // Obter a lista de trabalhadores contratados
-            List<Trabalhador> contratados = Comadre.getTrabalhadoresContratados();
-            
-                // Exibir os detalhes dos funcionários contratados
-            System.out.println("Funcionários contratados:");
-                for (Trabalhador funcionario : contratados) {
-                    System.out.println("Nome: " + funcionario.getNome());
-                    System.out.println("Horas de trabalho: " + funcionario.getHorasDeTrabalho());
-                    System.out.println("Horas de trabalho: " + funcionario.getValorDahora());
-                    // Calcular o pagamento total da empresa
-                    double pagamentoTotalTrabalhador = Comadre.calcularPagamentoTrabalhador(funcionario.getValorDahora(), funcionario.getHorasDeTrabalho());
-
-                    // Exibir o pagamento total
-                    System.out.println("Total a ser desembolsado pela empresa: R$" + pagamentoTotalTrabalhador );
+        trabalhador1.calcularPagamento();
 
 
-                    // Adicione mais informações conforme necessário
-                    System.out.println();
-                }
 
-                // Calcular o pagamento total da empresa
-                    double pagamentoTotal = Comadre.calcularPagamento();
+    }
 
-                    // Exibir o pagamento total
-                    System.out.println("Total a ser desembolsado pela empresa: R$" + pagamentoTotal );
-
-            }
-  
-            
-        }
+}

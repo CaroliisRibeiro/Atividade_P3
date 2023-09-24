@@ -6,6 +6,7 @@ public class Trabalhador {
     private boolean ferias;
 
 
+<<<<<<< HEAD
     public Trabalhador(String nome, int idade, double valorDahora, int horasDeTrabalho, boolean ferias) {
         this.nome = nome;
         this.idade = idade;
@@ -79,7 +80,55 @@ public class Trabalhador {
     public double calcularPagamento(double valorDahora2, int horasDeTrabalho2) {
         return 0;
     }
+=======
+public Trabalhador(String nome, int idade, double valorDaHora, int horasTrabalhadas, boolean ferias ){
+>>>>>>> 8d7e709ac1a9966567171179b3ee3a7e8dc61538
 
     
+<<<<<<< HEAD
 
     }
+=======
+}
+
+public String getNome() {
+    return nome;
+}
+
+
+public int getIdade() {
+    return idade;
+}
+
+
+public double getValorDaHora() {
+    return valorDaHora;
+}
+
+public int getHorasTrabalhadas() {
+    return horasTrabalhadas;
+}
+
+
+public boolean isFerias() {
+    return ferias;
+}
+
+
+public void trabalharPorHora(int horas) {
+    horasTrabalhadas += horas;
+}
+
+public void ferias() {
+    if (ferias) {
+        System.out.println(nome + " voltou ao trabalho.");
+        ferias = false;
+    } else {
+        System.out.println(nome + " está de férias.");
+        ferias = true;
+    }
+  }
+
+}
+
+>>>>>>> 8d7e709ac1a9966567171179b3ee3a7e8dc61538
